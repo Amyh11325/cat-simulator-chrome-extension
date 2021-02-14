@@ -1,3 +1,5 @@
+function getCat() {
+
 var overlay = document.createElement("div");
 var cat = document.createElement("div");
 var catWrap = document.createElement("div");
@@ -39,7 +41,7 @@ document.addEventListener('mouseup', function() {
             catWrap.remove();
             overlay.remove();
         }, 1000);
-        
+        setTimeout(getCat, 5000);
     }
 }, true);
 
@@ -56,4 +58,6 @@ document.addEventListener('mousemove', function(event) {
         catWrap.style.top  = (mousePosition.y + offset[1]) + 'px';
     }
 }, true);
+}
 
+getCat();

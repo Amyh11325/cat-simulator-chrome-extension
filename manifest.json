@@ -3,6 +3,7 @@
   "manifest_version": 2,
   "name": "Cat Simulator",
   "version": "0.1",
+  "description": "Simulate feline interferences",
 
   "browser_action": {
     "default_icon": "icons/caticon.png",
