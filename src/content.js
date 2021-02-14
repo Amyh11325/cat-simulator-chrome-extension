@@ -29,7 +29,18 @@ catButton.addEventListener("mousedown", function(e) {
 }, true);
 
 document.addEventListener('mouseup', function() {
-    isDown = false;
+    if (isDown) {
+        isDown = false;
+        catWrap.style.animationPlayState = "paused, running";
+
+        setTimeout(function f() {
+            catButton.remove();
+            cat.remove();
+            catWrap.remove();
+            overlay.remove();
+        }, 1000);
+        
+    }
 }, true);
 
 document.addEventListener('mousemove', function(event) {
@@ -45,3 +56,4 @@ document.addEventListener('mousemove', function(event) {
         catWrap.style.top  = (mousePosition.y + offset[1]) + 'px';
     }
 }, true);
+

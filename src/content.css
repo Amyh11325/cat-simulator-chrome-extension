@@ -1,5 +1,7 @@
 .cat-wrapper {
-    animation: move-cat 4s linear;
+    animation: move-cat 4s linear, drop-cat 1s;
+    animation-play-state: running, paused;
+    animation-fill-mode: backwards, forwards;
     position: absolute;
     bottom: 0%;
 }
@@ -28,7 +30,7 @@
     top: 0px;
     left: 0px;
     z-index: 1000;
-    pointer-events: none;
+    /*pointer-events: none;*/
 }
 
 .walking {
@@ -71,9 +73,10 @@
 @keyframes drop-cat {
     0% {transform: translate3d(0px, 0px, 0);
         animation-timing-function: ease-in-out;}
-    5% {transform: translate3d(-50px, -50px, 0);
+    10% {transform: translate3d(-50px, -50px, 0);
         animation-timing-function: ease-in;}
-    100% {transform: translate3d(-80px, 2000px, 0);}
+    70% {transform: translate3d(-300px, 1600px, 0);}
+    100% {transform: translate3d(-300px, 1600px, 0);}
 }
 
 @keyframes sit-animation{
