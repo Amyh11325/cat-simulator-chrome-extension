@@ -1,20 +1,19 @@
 .cat-wrapper {
+    animation: move-cat 4s infinite linear;
     position: absolute;
-    width: 50%;
-    height: 25%;
-    bottom: 50%;
-    left:25%;
+    bottom: 0%;
 }
 
 .cat {
     width:400px;
     height:200px;
-    top: 0%;
-    left: 0%;
+    bottom: 0%;
+    right: 0%;
     zoom: 3.2;
 }
 
 .overlay {
+    overflow-x: hidden;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -37,5 +36,14 @@
 
     to {
         background-position: 0 -2391px;
+    }
+}
+
+@keyframes move-cat {
+    from {
+        left: 105%;
+    }
+    to {
+        left: 0%;
     }
 }
