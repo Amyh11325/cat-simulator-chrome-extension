@@ -1,9 +1,15 @@
 var trueColor;
+var trueTime;
 chrome.storage.sync.get('favoriteColor', function(response) {
     console.log(response);
     trueColor = response.favoriteColor;
+});
+
+chrome.storage.sync.get('favoriteTime', function(response) {
+    trueTime = response.favoriteTime;
     getCat();
 });
+
 function getCat() {
 var overlay = document.createElement("div");
 var cat = document.createElement("div");
@@ -56,7 +62,7 @@ document.addEventListener('mouseup', function() {
             catWrap.remove();
             overlay.remove();
         }, 1000);
-        setTimeout(getCat, 5000);
+        setTimeout(getCat, 10000 * trueTime/20);
     }
 }, true);
 
