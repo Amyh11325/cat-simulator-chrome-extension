@@ -1,5 +1,5 @@
-var trueColor;
-var trueTime;
+var trueColor = "black";
+var trueTime = 20;
 chrome.storage.sync.get('favoriteColor', function(response) {
     console.log(response);
     trueColor = response.favoriteColor;
