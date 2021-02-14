@@ -3,8 +3,8 @@ function save_options() {
   var color = document.getElementById('cats').value;
   var time = document.getElementById('time').value;
   chrome.storage.sync.set({
-    favoriteColor: color,
-    favoriteTime: time
+    'favoriteColor': color,
+    'favoriteTime': time
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
