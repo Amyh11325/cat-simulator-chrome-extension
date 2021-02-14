@@ -1,12 +1,15 @@
 var overlay = document.createElement("div");
 var cat = document.createElement("div");
+var catWrap = document.createElement("div");
 
-var catTiles = chrome.extension.getURL("./assets/cat_tiles.png");
+var catTiles = chrome.extension.getURL("src/assets/cat_tiles.png");
 
 overlay.classList.add("overlay");
-overlay.innerHTML = "Hello";
+catWrap.classList.add("cat-wrapper");
 cat.classList.add("cat");
 cat.classList.add("walking");
+cat.style.backgroundImage = "url(" + catTiles + ")";
 
-overlay.appendChild(cat);
+catWrap.appendChild(cat);
+overlay.appendChild(catWrap);
 document.body.appendChild(overlay);

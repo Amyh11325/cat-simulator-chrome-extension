@@ -1,7 +1,17 @@
+.cat-wrapper {
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    bottom: 50%;
+    left:25%;
+}
+
 .cat {
     width:400px;
-    height:400px;
-    margin: 50px auto 0;
+    height:200px;
+    top: 0%;
+    left: 0%;
+    zoom: 3.2;
 }
 
 .overlay {
@@ -12,7 +22,6 @@
     left: 0px;
     z-index: 1000;
     pointer-events: none;
-    background-image: url("chrome-extension://__MSG_@@extension_id__/src/assets/cat_tiles.png");
 }
 
 .walking {

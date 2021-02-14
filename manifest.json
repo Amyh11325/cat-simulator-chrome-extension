@@ -15,6 +15,8 @@
     "storage"
 ],
 
+"web_accessible_resources": ["src/assets/cat_tiles.png"],
+
 "description": "Chrome Extension Hackpack @ TreeHacks 2019",
 "icons": {
   "16": "icons/TreeHacks-white-16.png",
@@ -35,8 +37,7 @@
       "<all_urls>"
     ],
     "js": ["src/content.js"],
-    "css": ["src/content.css"],
-    "web_accessible_resources": ["src/assets/cat_tiles.png"]
+    "css": ["src/content.css"]
   }
 ]
 }
