@@ -1,13 +1,13 @@
 {
 
   "manifest_version": 2,
-  "name": "Maodoro",
+  "name": "maodoro Cat Simulator",
   "version": "0.1",
   "description": "Simulate feline interferences",
 
   "browser_action": {
     "default_icon": "icons/caticon.png",
-    "default_title": "Maodoro",
+    "default_title": "maodoro",
     "default_popup": "src/popup.html"
   },
 
