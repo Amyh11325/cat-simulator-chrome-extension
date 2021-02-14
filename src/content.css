@@ -3,12 +3,12 @@
     animation-play-state: running, paused;
     animation-fill-mode: backwards, forwards;
     position: absolute;
-    bottom: 0%;
+    bottom: -9%;
 }
 
 .cat {
     width:400px;
-    height:183px;
+    height:200px;
     bottom: 0%;
     zoom: 3.5;
 }
@@ -18,8 +18,7 @@
     left: 10%;
     height: 100%;
     width: 40%;
-    background-color: red;
-    opacity: 0.1;
+    pointer-events: none;
 }
 
 .overlay {
@@ -29,8 +28,8 @@
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 1000;
-    /*pointer-events: none;*/
+    z-index: 10000;
+    pointer-events: none;
 }
 
 .walking {
@@ -81,10 +80,10 @@
 
 @keyframes sit-animation{
     from {
-        background-position: -400px 0px;
+        background-position: -400px -0px;
     }
 
     to {
-        background-position: -400px -997px;
+        background-position: -400px -996px;
     }
 }
