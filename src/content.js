@@ -17,6 +17,8 @@ catWrap.appendChild(cat);
 overlay.appendChild(catWrap);
 document.body.appendChild(overlay);
 
+setTimeout(function f() {catButton.style.pointerEvents = "all";}, 5500);
+
 //move cat if pressed
 var mousePosition;
 var offset = [0, 0];
