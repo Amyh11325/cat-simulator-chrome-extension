@@ -15,9 +15,6 @@ var overlay = document.createElement("div");
 var cat = document.createElement("div");
 var catWrap = document.createElement("div");
 var catButton = document.createElement("div");
-chrome.storage.sync.get('favoriteColor', function(response) {
-    console.log(response);
-});
 var catTiles;
 if (trueColor === "black"){
   catTiles = chrome.extension.getURL("src/assets/cat_tiles.png");
