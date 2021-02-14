@@ -16,7 +16,7 @@
     "storage"
 ],
 
-"web_accessible_resources": ["src/assets/aliltrans.png", "src/assets/cat_tiles.png"],
+"web_accessible_resources": ["src/assets/aliltrans.png", "src/assets/cat_tiles.png", "src/assets/LMAO.png"],
 
 "icons": {
   "64": "icons/caticon.png"
