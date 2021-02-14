@@ -1,13 +1,13 @@
 {
 
   "manifest_version": 2,
-  "name": "Cat Simulator",
+  "name": "Maodoro",
   "version": "0.1",
   "description": "Simulate feline interferences",
 
   "browser_action": {
     "default_icon": "icons/caticon.png",
-    "default_title": "Cal to Butt",
+    "default_title": "Maodoro",
     "default_popup": "src/popup.html"
   },
 
@@ -16,7 +16,7 @@
     "storage"
 ],
 
-"web_accessible_resources": ["src/assets/aliltrans.png"],
+"web_accessible_resources": ["src/assets/aliltrans.png", "src/assets/cat_tiles.png"],
 
 "icons": {
   "64": "icons/caticon.png"
