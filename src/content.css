@@ -1,15 +1,24 @@
 .cat-wrapper {
-    animation: move-cat 4s infinite linear;
+    animation: move-cat 4s linear;
     position: absolute;
     bottom: 0%;
 }
 
 .cat {
     width:400px;
-    height:200px;
+    height:183px;
     bottom: 0%;
-    right: 0%;
-    zoom: 3.2;
+    zoom: 3.5;
+}
+
+.cat-button {
+    position: absolute;
+    left: 10%;
+    height: 100%;
+    width: 40%;
+    background-color: red;
+    opacity: 0.1;
+    pointer-events: all;
 }
 
 .overlay {
@@ -25,8 +34,20 @@
 
 .walking {
     animation: walk-animation 2s steps(12) infinite;
-    background-image: url("chrome-extension://__MSG_@@extension_id__/src/assets/cat_tiles.png") 0 0 no-repeat;
-    
+    background-image: 0 0 no-repeat;
+}
+
+.sitting {
+    animation: sit-animation 2s steps(6);
+    background-image: 0 0 no-repeat;
+}
+
+.walk-and-sit {
+    animation: walk-animation 2s steps(12), sit-animation 1.5s steps(5);
+    animation-delay: 0s, 4s;
+    animation-iteration-count: 2, 1;
+    animation-fill-mode: forwards, forwards;
+    background-image: 0 0 no-repeat;
 }
 
 @keyframes walk-animation{
@@ -45,5 +66,15 @@
     }
     to {
         left: 0%;
+    }
+}
+
+@keyframes sit-animation{
+    from {
+        background-position: -400px 0px;
+    }
+
+    to {
+        background-position: -400px -997px;
     }
 }
