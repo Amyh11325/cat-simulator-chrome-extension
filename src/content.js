@@ -1,13 +1,24 @@
+var trueColor;
+chrome.storage.sync.get('favoriteColor', function(response) {
+    console.log(response);
+    trueColor = response.favoriteColor;
+    getCat();
+});
 function getCat() {
-
 var overlay = document.createElement("div");
 var cat = document.createElement("div");
 var catWrap = document.createElement("div");
 var catButton = document.createElement("div");
-var happy = chrome.storage.sync.get('favoriteColor', function(response) {
+chrome.storage.sync.get('favoriteColor', function(response) {
     console.log(response);
 });
-var catTiles = chrome.extension.getURL("src/assets/aliltrans.png");
+var catTiles;
+if (trueColor === "black"){
+  catTiles = chrome.extension.getURL("src/assets/aliltrans.png");
+}
+else{
+  catTiles = chrome.extension.getURL("src/assets/LMAO.png");
+}
 overlay.classList.add("overlay");
 catWrap.classList.add("cat-wrapper");
 cat.classList.add("cat");
@@ -60,5 +71,3 @@ document.addEventListener('mousemove', function(event) {
     }
 }, true);
 }
-
-getCat();
