@@ -5,7 +5,7 @@
   "version": "0.1",
 
   "browser_action": {
-    "default_icon": "icons/TreeHacks-white-19.png",
+    "default_icon": "icons/caticon.png",
     "default_title": "Cal to Butt",
     "default_popup": "src/popup.html"
   },
@@ -18,12 +18,7 @@
 "web_accessible_resources": ["src/assets/cat_tiles.png"],
 
 "icons": {
-  "16": "icons/TreeHacks-white-16.png",
-  "32": "icons/TreeHacks-white-32.png",
-  "48": "icons/TreeHacks-white-48.png",
-  "64": "icons/TreeHacks-white-64.png",
-  "96": "icons/TreeHacks-white-96.png",
-  "128": "icons/TreeHacks-white-128.png"
+  "64": "icons/caticon.png"
 },
 
 "background": {
