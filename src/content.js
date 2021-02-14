@@ -3,7 +3,7 @@ var cat = document.createElement("div");
 var catWrap = document.createElement("div");
 var catButton = document.createElement("div");
 
-var catTiles = chrome.extension.getURL("src/assets/cat_tiles.png");
+var catTiles = chrome.extension.getURL("src/assets/aliltrans.png");
 
 overlay.classList.add("overlay");
 catWrap.classList.add("cat-wrapper");

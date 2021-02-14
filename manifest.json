@@ -15,7 +15,7 @@
     "storage"
 ],
 
-"web_accessible_resources": ["src/assets/cat_tiles.png"],
+"web_accessible_resources": ["src/assets/aliltrans.png"],
 
 "icons": {
   "16": "icons/TreeHacks-white-16.png",
