@@ -1,19 +1,20 @@
 .cat-wrapper {
-    animation: move-cat 4s infinite linear;
     position: absolute;
-    bottom: 0%;
+    width: 50%;
+    height: 25%;
+    bottom: 50%;
+    left:25%;
 }
 
 .cat {
     width:400px;
     height:200px;
-    bottom: 0%;
-    right: 0%;
+    top: 0%;
+    left: 0%;
     zoom: 3.2;
 }
 
 .overlay {
-    overflow-x: hidden;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -26,7 +27,6 @@
 .walking {
     animation: walk-animation 2s steps(12) infinite;
     background-image: url("chrome-extension://__MSG_@@extension_id__/src/assets/cat_tiles.png") 0 0 no-repeat;
-    
 }
 
 @keyframes walk-animation{
@@ -38,12 +38,19 @@
         background-position: 0 -2391px;
     }
 }
-
-@keyframes move-cat {
-    from {
-        left: 105%;
-    }
-    to {
-        left: 0%;
-    }
+@keyframes pause-between-iterations {
+  /* Other animation is visible for 25% of the time */
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  /* Other animation is hidden for 75% of the time */
+  25.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
