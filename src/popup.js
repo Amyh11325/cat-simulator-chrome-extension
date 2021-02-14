@@ -20,4 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 function catDex(){
     alert("Your button was pressed");
+    var div = document.getElementById('button'); 
+    div.remove();  
 }; 
