@@ -18,3 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
         })();
     }
 });
+function catDex(){
+    alert("Your button was pressed");
+}; 

@@ -38,19 +38,3 @@
         background-position: 0 -2391px;
     }
 }
-@keyframes pause-between-iterations {
-  /* Other animation is visible for 25% of the time */
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 0;
-  }
-  /* Other animation is hidden for 75% of the time */
-  25.1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}

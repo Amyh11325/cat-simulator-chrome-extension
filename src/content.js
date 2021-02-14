@@ -1,28 +1,45 @@
-/* File: content.js
- * ---------------
- * Hello! You'll be making most of your changes
- * in this file. At a high level, this code replaces
- * the substring "cal" with the string "butt" on web pages.
- *
- * This file contains javascript code that is executed
- * everytime a webpage loads over HTTP or HTTPS.
- */
+var overlay = document.createElement("div");
+var cat = document.createElement("div");
+var catWrap = document.createElement("div");
+var catButton = document.createElement("div");
 
-var elements = document.getElementsByTagName('*');
+var catTiles = chrome.extension.getURL("src/assets/cat_tiles.png");
 
-for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
+overlay.classList.add("overlay");
+catWrap.classList.add("cat-wrapper");
+cat.classList.add("cat");
+cat.classList.add("walk-and-sit");
+cat.style.backgroundImage = "url(" + catTiles + ")";
+catButton.classList.add("cat-button");
 
-    for (var j = 0; j < element.childNodes.length; j++) {
-        var node = element.childNodes[j];
+cat.appendChild(catButton);
+catWrap.appendChild(cat);
+overlay.appendChild(catWrap);
+document.body.appendChild(overlay);
 
-        if (node.nodeType === 3) {
-            var text = node.nodeValue;
-            var replacedText = text.replace(/cal/gi, "butt"); // replaces "cal," "Cal", etc. with "butt"
+//move cat if pressed
+var mousePosition;
+var offset = [0, 0];
+var isDown = false;
+catButton.addEventListener("mousedown", function(e) {
+    isDown = true;
+    offset = [catWrap.offsetLeft - e.clientX, catWrap.offsetTop - e.clientY];
+}, true);
 
-            if (replacedText !== text) {
-                element.replaceChild(document.createTextNode(replacedText), node);
-              }
-        }
+document.addEventListener('mouseup', function() {
+    isDown = false;
+}, true);
+
+document.addEventListener('mousemove', function(event) {
+    event.preventDefault();
+    if (isDown) {
+        mousePosition = {
+
+            x : event.clientX,
+            y : event.clientY
+
+        };
+        catWrap.style.left = (mousePosition.x + offset[0]) + 'px';
+        catWrap.style.top  = (mousePosition.y + offset[1]) + 'px';
     }
-}
+}, true);
