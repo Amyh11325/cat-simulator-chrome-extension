@@ -14,6 +14,9 @@ chrome.storage.sync.get('favoriteColor', function(response) {
 });
 var catTiles;
 if (trueColor === "black"){
+  catTiles = chrome.extension.getURL("src/assets/cat_tiles.png");
+}
+else if (trueColor === "purple"){
   catTiles = chrome.extension.getURL("src/assets/aliltrans.png");
 }
 else{

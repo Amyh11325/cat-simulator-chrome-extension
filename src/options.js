@@ -20,7 +20,7 @@ function save_options() {
 function restore_options() {
   // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
-    favoriteColor: 'black',
+    favoriteColor: "black",
     favoriteTime: 20
   }, function(items) {
     document.getElementById('cats').value = items.favoriteColor;
